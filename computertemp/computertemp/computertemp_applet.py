@@ -394,11 +394,11 @@ class computertempApplet(gnomeapplet.Applet):
 	# Callback: panel background changed
 	def change_background(self, panelapplet, backgroundtype, color, pixmap):
 		self.applet.modify_bg(gtk.STATE_NORMAL, color)
-		self.box.modify_bg(gtk.STATE_NORMAL, color)
+		self.inside_applet.modify_bg(gtk.STATE_NORMAL, color)
 		
 		if pixmap is not None:
 			s1 = self.applet.get_style()
-			s2 = self.box.get_style()
+			s2 = self.inside_applet.get_style()
 			s1.bg_pixmap[gtk.STATE_NORMAL] = pixmap
 			s2.bg_pixmap[gtk.STATE_NORMAL] = pixmap
 
@@ -409,7 +409,7 @@ class computertempApplet(gnomeapplet.Applet):
 
 			self.inside_applet.remove(self.icon)
 			self.inside_applet.remove(self.temp)
-			self.box.remove(self.inside_applet)
+			self.applet.remove(self.inside_applet)
 			
 			if self.orientation == 2 or self.orientation == 3:
 				self.inside_applet = gtk.VBox()
@@ -419,19 +419,13 @@ class computertempApplet(gnomeapplet.Applet):
 			self.inside_applet.pack_start(self.icon)
 			self.inside_applet.pack_start(self.temp)
 			self.inside_applet.show_all()
-			self.box.add(self.inside_applet)
+			self.applet.add(self.inside_applet)
+			
 
 	# Draws applet
 	def create_applet(self):
 		
 		app_window = self.applet
-		
-		# Creates eventbox
-		event_box = gtk.EventBox()
-		event_box.set_events(gtk.gdk.BUTTON_PRESS_MASK | 
-			gtk.gdk.POINTER_MOTION_MASK | 
-			gtk.gdk.POINTER_MOTION_HINT_MASK |
-			gtk.gdk.CONFIGURE )
 		
 		# Creates icon for applet
 		self.icon = gtk.Image()
@@ -450,11 +444,9 @@ class computertempApplet(gnomeapplet.Applet):
 		self.tooltip = gtk.Tooltips()
 		self.update_tooltip()
 		
-		# Adds hbox to eventbox
-		event_box.add(self.inside_applet)
-		app_window.add(event_box)
+		# Adds hbox to applet
+		app_window.add(self.inside_applet)
 		app_window.show_all()
-		return event_box
 
 	def menu_set(self):
 		
@@ -557,7 +549,7 @@ class computertempApplet(gnomeapplet.Applet):
 		self.tempmon = tempf.TempFuncs(self)
 
 		# Lets create the gui
-		self.box = self.create_applet()
+		self.create_applet()
 		self.change_orientation(None, None) # Forcing to get panel position
 		self.prefs = prefs.ComputertempPrefs(self)
 		
