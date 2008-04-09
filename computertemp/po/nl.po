@@ -2,15 +2,15 @@
 # Copyright (C) 2006 Adriaan Peeters <apeeters@lashout.net>
 # This file is distributed under the same license as the computertemp package.
 # Adriaan Peeters <apeeters@lashout.net>, 2006.
-# 
-# 
+#
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: computertemp 0.9.5\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-10-17 23:27+0200\n"
-"PO-Revision-Date: 2006-05-22 18:45+0200\n"
-"Last-Translator: Adriaan Peeters <apeeters@lashout.net>\n"
+"PO-Revision-Date: 2008-04-09 13:39+0100\n"
+"Last-Translator: Adolfo González Blázquez <code@infinicode.org>\n"
 "Language-Team: Dutch <nl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -172,7 +172,7 @@ msgstr "Zet pad voor log bestand manueel"
 #. Log format
 #: ../computertemp/computertemp_prefs.py:524
 msgid "Log format:"
-msgstr ""
+msgstr "Log formaat:"
 
 #: ../computertemp/computertemp_prefs.py:578
 msgid "Log"
@@ -219,7 +219,8 @@ msgstr "Herhaal het alarm commando?"
 msgid "Alarm"
 msgstr "Alarm"
 
-#: ../data/computertemp_menu.xml.h:1 ../data/computertemp_menu2.xml.h:1
+#: ../data/computertemp_menu.xml.h:1
+#: ../data/computertemp_menu2.xml.h:1
 msgid "_About"
 msgstr "In_fo"
 
@@ -227,7 +228,8 @@ msgstr "In_fo"
 msgid "_Enable alarm"
 msgstr "_Schakel alarm in"
 
-#: ../data/computertemp_menu.xml.h:3 ../data/computertemp_menu2.xml.h:3
+#: ../data/computertemp_menu.xml.h:3
+#: ../data/computertemp_menu2.xml.h:3
 msgid "_Preferences"
 msgstr "_Instelligen"
 
@@ -241,7 +243,7 @@ msgstr "Uit te voeren commando wanneer het alarmniveau is bereikt"
 
 #: ../data/computertemp.schemas.in.h:2
 msgid "Display debug information on tooltip?"
-msgstr ""
+msgstr "Toon debug informatie op de tooltip?"
 
 #: ../data/computertemp.schemas.in.h:3
 msgid "Hardware sensor to monitor"
@@ -249,7 +251,7 @@ msgstr "Hardware sensor die wordt gemeten"
 
 #: ../data/computertemp.schemas.in.h:4
 msgid "Information written in log file"
-msgstr ""
+msgstr "Informatie naar log bestand geschreven"
 
 #: ../data/computertemp.schemas.in.h:5
 msgid "Is alarm enabled?"
@@ -318,12 +320,10 @@ msgstr "Controleert Computer CPU temperatuur"
 #, fuzzy
 #~ msgid "Control your computer temperatures"
 #~ msgstr "Controleert Computer CPU temperatuur"
-
 #~ msgid "Enter path for log file:"
 #~ msgstr "Voer pad in voor het log bestand:"
-
 #~ msgid "Laptop Temperature Monitor"
 #~ msgstr "Laptop Temperatuur Meter"
-
 #~ msgid "Thermal Zone %s"
 #~ msgstr "Thermische Zone %s"
+
