@@ -1,0 +1,100 @@
+-================================-
+-= COMPUTER TEMPERATURE MONITOR =-
+-================================-
+
+ Computer Temperature Monitor is a little applet for the GNOME desktop 
+ that shows the temperature of your CPU and disks on screen.
+ It also allows you to log temperatures to a file.
+ You can set alarms to notify you when a tempertature is reached.
+ Several monitors can be added to the panel to monitor different sensors.
+ It is designed to look like CPU Frequency Gnome applet, so they match each other on panel.
+
+ Computer Temperature Monitor is released under the terms of the GNU General Public License.
+ 
+ This applet used to be called Laptop Temperature Monitor.
+ 
+ http://computertemp.berlios.de/
+
+
+-= REQUIREMENTS =_
+ * python
+ * pygtk (>= 2.4)
+ * gconf2
+ * python-gnome
+ * python-gnome-extras (or python-gnome-desktop if you're using GNOME >= 2.14)
+ * one of these:
+ 	- acpi thermal support
+ 	- ibm laptop acpi
+ 	- adt746x (ibook and powerbook)
+ 	- omnibook (hp and toshiba models)
+ 	- i8k (dell latitude and inspiron)
+ 	- i2c sensors kernel modules
+ 	- hhdtemp harddisk monitor
+ 	- windfarm (Apple G5)
+
+
+-= INSTALL =-
+ ./configure
+ make 
+ make install
+
+
+-= BACKENDS =-
+ Computertemp supports getting thermal information from:
+ - kernel 2.6 acpi thermal zone (/proc/acpi/thermal_zone)
+ - ibm_acpi kernel 2.6 module: (/proc/acpi/ibm)
+ - powerbook and ibooks thermal support (adt746x)
+ - omnibook kernel module (hp and toshiba models)
+ - i8k kernel module (dell inspiron and latitude)
+ - i2c sensors kernel modules
+ - hhdtemp harddisk monitor
+ - apple g5 computers (windfarm)
+ 
+
+-= ARTWORK=-
+ Icons stolen and modified from cpufreq applet by Carlos García Campos <carlosgc@gnome.org>.
+ Those icons made by Pablo Arroyo Loma <zzioma@yahoo.es>.
+ Hard Disk icon taken from Gnome Icon Theme (http://www.gnome.org), under GPL.
+
+
+-= CONTACT =-
+ More info on:	http://computertemp.berlios.de/
+ Bugs, emails:	code@infinicode.org
+
+
+-= RESOURCES =-
+
+ * IBM ACPI Thermal Sensors
+ 	http://www.thinkwiki.org/wiki/Thermal_Sensors
+ 	
+ * Omnibook Kernel Module:
+ 	http://sourceforge.net/projects/omke
+ 	http://www.nonotor.net/index.php?lg=en&mode=tosh
+ 	
+ * i8k (Dell Latitude and Inspiron)
+ 	http://people.debian.org/~dz/i8k/00-README
+
+ * Gnome applets with Python, by Arturo González Ferrer
+	http://pygtk.org/articles/applets_arturogf/
+	
+ * Debugging GNOME Applets, by Davyd Madeley
+	http://www.davyd.id.au/articles/debugging-gnome-applets.shtml
+
+ * Entendiendo autoconf y automake, by Germán Poo Caamaño
+	http://www.ubiobio.cl/~gpoo/documentos/autotools/
+	
+
+-= THANKS =-
+ Francesco Accattapà <callipeo@libero.it> (adt746x support and bugfixing)
+ Eric Steimer <Commuto@gmail.com> (French translation)
+ Stefano Maggiolo <esse.t@tin.it> (Italian translation)
+ Adriaan Peeters <apeeters@lashout.net> (Dutch translation)
+ Hannes Rosenbauera <rebugger@b3ta.de> (German translation)
+ 黄 海泉 <tt1515@hotmail.com> (Simplified Chinese translation)
+ Daniel Nylander <po@danielnylander.se> (Swedish translation)
+ 
+ Braden "braden" McDaniel on #devtools (irc.freenode.net) for helping with autotools
+ Davyd Madeley for helping with intltool
+ Michael Ott for helping debugging ibm_acpi module
+ Zdravko Nikolov and Velko Hristov for bug squashing
+ Erik Hanson for helping with i2c_sys_hwmon

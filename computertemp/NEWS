@@ -1,0 +1,113 @@
+2007-07-20  Adolfo González Blázquez <code@infinicode.org>
+
+	* Version 0.9.6.1 Released
+	* Fixed little bug on hddtemp info parsing
+
+
+2006-10-18  Adolfo González Blázquez <code@infinicode.org>
+
+	* Version 0.9.6 Released
+	* Add support for i2c sensors under /sys/hwmon
+	
+
+2006-10-16  Adolfo González Blázquez <code@infinicode.org>
+
+	* Version 0.9.5 Released
+	* Added command line option to show debug info on tooltip (--debug)
+	* Bugfixes
+	
+
+2006-10-10  Adolfo González Blázquez <code@infinicode.org>
+
+	* Version 0.9.4 Released
+	* Added support for custom information on logs
+	* Added Swedish translation, thanks to Daniel Nylander <po@danielnylander.se>
+	* Fixed bug with timeouts, thanks to Zdravko Nikolov and Velko Hristov
+	
+
+2006-09-04  Adolfo González Blázquez <code@infinicode.org>
+
+	* Version 0.9.3 Released
+	* Changed the way the temperature file is read to fix bug in modules (acpi, ibm_acpi, i8k, omnibook)
+	
+
+2006-08-30  Adolfo González Blázquez <code@infinicode.org>
+
+	* Version 0.9.2 Released
+	* Added support for Apple G5 computers (windfarm sensors)
+	* Added support for dynamic log filenames using patterns
+	* Fixed bug that prevented the icon to appear sometimes
+	* Added a GConf key for showing debug information on applet tooltip
+	* Bugfixes
+	
+
+2006-06-10  Adolfo González Blázquez <agblazquez@telefonica.net>
+
+	* Version 0.9.1 Released
+	* Added simplified chinese translation, thanks to tt <tt7646@gmail.com>
+	* Added support for change logging timeout
+	* Some bugfixes
+	
+
+2006-04-18  Adolfo González Blázquez <agblazquez@telefonica.net>
+
+	* Version 0.9.0 Released
+	* Changed name to Computer Temperature Monitor
+	* Fixed tons of bugs with the modules
+	* Changed preferences windows a bit
+	* Added German translation, thanks to Hannes Rosenbauer <rebugger@b3ta.de>
+
+
+2006-04-13  Adolfo González Blázquez <agblazquez@telefonica.net>
+
+	* Version 0.8.0 Released
+	* Added support for monitoring Harddisk temperatures (using hddtemp)
+	* Added support for monitoring Linux kernel i2c sensor modules
+	* Added support for selecting which sensor to monitor (if several available)
+	* Added italian translation, thanks to Stefano Maggiolo <esse.t@tin.it>
+	* Added dutch translation, thanks to Adriaan Peeters <apeeters@lashout.net>
+	* Fixed bugs on i8k and ibm_acpi modules, and several minor bugs
+	
+
+2006-04-09  Adolfo González Blázquez <agblazquez@telefonica.net>
+
+	* Version 0.7.0 Released
+	* Added support for Alarms
+	* Added support for vertical panel display
+	* Added French translation
+	* Bugfixes and refactorizations
+
+
+2006-03-20  Adolfo González Blázquez <agblazquez@telefonica.net>
+
+	* Version 0.6.0 Released
+	
+
+2006-02-17  Adolfo González Blázquez <agblazquez@telefonica.net>
+
+	* Version 0.5.0 Released
+
+
+2006-01-13  Adolfo González Blázquez <agblazquez@telefonica.net>
+
+	* Version 0.4.1 Released
+
+
+2006-01-11  Adolfo González Blázquez <agblazquez@telefonica.net>
+
+	* Version 0.4 Released
+
+
+2005-08-31  Adolfo González Blázquez <agblazquez@telefonica.net>
+
+	* Version 0.3 Released
+
+
+2005-08-29  Adolfo González Blázquez <agblazquez@telefonica.net>
+
+	* Version 0.2 Released
+	
+
+2005-08-26  Adolfo González Blázquez <agblazquez@telefonica.net>
+
+	* Version 0.1 Released

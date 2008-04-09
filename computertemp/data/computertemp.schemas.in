@@ -1,0 +1,201 @@
+<gconfschemafile>
+  <schemalist>
+
+    <schema>
+      <key>/schemas/apps/computertemp/sensor</key>
+      <applyto>/apps/computertemp/sensor</applyto>
+      <owner>computertemp</owner>
+      <type>int</type>
+      <default>0</default>
+      <locale name="C">
+         <short>Hardware sensor to monitor</short>
+      </locale>
+   </schema>
+
+    <schema>
+      <key>/schemas/apps/computertemp/thermal_zone</key>
+      <applyto>/apps/computertemp/thermal_zone</applyto>
+      <owner>computertemp</owner>
+      <type>int</type>
+      <default>0</default>
+      <locale name="C">
+         <short>Thermal zone to monitor</short>
+      </locale>
+   </schema>
+   
+    <schema>
+      <key>/schemas/apps/computertemp/visualization_mode</key>
+      <applyto>/apps/computertemp/visualization_mode</applyto>
+      <owner>computertemp</owner>
+      <type>int</type>
+      <default>0</default>
+      <locale name="C">
+         <short>Visualization mode: 0-Graphic, 1-Text, 2-Graphic and Text</short>
+      </locale>
+   </schema>
+
+    <schema>
+      <key>/schemas/apps/computertemp/visualization_units</key>
+      <applyto>/apps/computertemp/visualization_units</applyto>
+      <owner>computertemp</owner>
+      <type>int</type>
+      <default>0</default>
+      <locale name="C">
+         <short>Visualization units: 0-Celsius, 1-Fahrenheit</short>
+      </locale>
+   </schema>
+
+    <schema>
+      <key>/schemas/apps/computertemp/timeout</key>
+      <applyto>/apps/computertemp/timeout</applyto>
+      <owner>computertemp</owner>
+      <type>int</type>
+      <default>5</default>
+      <locale name="C">
+         <short>Time (in seconds) between checks</short>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/computertemp/timeout_log</key>
+      <applyto>/apps/computertemp/timeout_log</applyto>
+      <owner>computertemp</owner>
+      <type>int</type>
+      <default>5</default>
+      <locale name="C">
+         <short>Time (in seconds) to update the log</short>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/computertemp/min_temp</key>
+      <applyto>/apps/computertemp/min_temp</applyto>
+      <owner>computertemp</owner>
+      <type>int</type>
+      <default>40</default>
+      <locale name="C">
+         <short>Minimum temperature</short>
+      </locale>
+   </schema>
+
+    <schema>
+      <key>/schemas/apps/computertemp/max_temp</key>
+      <applyto>/apps/computertemp/max_temp</applyto>
+      <owner>computertemp</owner>
+      <type>int</type>
+      <default>80</default>
+      <locale name="C">
+         <short>Maximum temperature</short>
+      </locale>
+   </schema>
+   
+    <schema>
+      <key>/schemas/apps/computertemp/logging</key>
+      <applyto>/apps/computertemp/logging</applyto>
+      <owner>computertemp</owner>
+      <type>bool</type>
+      <default>false</default>
+      <locale name="C">
+         <short>Is logging enabled?</short>
+      </locale>
+   </schema>
+
+    <schema>
+      <key>/schemas/apps/computertemp/autologname</key>
+      <applyto>/apps/computertemp/autologname</applyto>
+      <owner>computertemp</owner>
+      <type>bool</type>
+      <default>true</default>
+      <locale name="C">
+         <short>Set log file name automatically?</short>
+      </locale>
+   </schema>
+   
+    <schema>
+      <key>/schemas/apps/computertemp/log_filename</key>
+      <applyto>/apps/computertemp/log_filename</applyto>
+      <owner>computertemp</owner>
+      <type>string</type>
+      <default></default>
+      <locale name="C">
+         <short>Log file name</short>
+      </locale>
+   </schema>
+
+    <schema>
+      <key>/schemas/apps/computertemp/log_info</key>
+      <applyto>/apps/computertemp/log_info</applyto>
+      <owner>computertemp</owner>
+      <type>string</type>
+      <default></default>
+      <locale name="C">
+         <short>Information written in log file</short>
+      </locale>
+   </schema>
+   
+    <schema>
+      <key>/schemas/apps/computertemp/alarm_enabled</key>
+      <applyto>/apps/computertemp/alarm_enabled</applyto>
+      <owner>computertemp</owner>
+      <type>bool</type>
+      <default>false</default>
+      <locale name="C">
+         <short>Is alarm enabled?</short>
+      </locale>
+   </schema>
+   
+   <schema>
+      <key>/schemas/apps/computertemp/alarm_limit</key>
+      <applyto>/apps/computertemp/alarm_limit</applyto>
+      <owner>computertemp</owner>
+      <type>int</type>
+      <default>80</default>
+      <locale name="C">
+         <short>Temperature limit that raises the alarm</short>
+      </locale>
+   </schema>
+
+    <schema>
+      <key>/schemas/apps/computertemp/alarm_when</key>
+      <applyto>/apps/computertemp/alarm_when</applyto>
+      <owner>computertemp</owner>
+      <type>int</type>
+      <default>1</default>
+      <locale name="C">
+         <short>When to raise the alarm: 0-Smaller than limit, 1-Greater than limit</short>
+      </locale>
+   </schema>
+
+    <schema>
+      <key>/schemas/apps/computertemp/alarm_command</key>
+      <applyto>/apps/computertemp/alarm_command</applyto>
+      <owner>computertemp</owner>
+      <type>string</type>
+      <default></default>
+      <locale name="C">
+         <short>Command to execute when alarm is triggered</short>
+      </locale>
+   </schema>
+    <schema>
+      <key>/schemas/apps/computertemp/alarm_repeat</key>
+      <applyto>/apps/computertemp/alarm_repeat</applyto>
+      <owner>computertemp</owner>
+      <type>bool</type>
+      <default>false</default>
+      <locale name="C">
+         <short>Should alarm command be repeated?</short>
+      </locale>
+   </schema>
+       <schema>
+      <key>/schemas/apps/computertemp/debug</key>
+      <applyto>/apps/computertemp/debug</applyto>
+      <owner>computertemp</owner>
+      <type>bool</type>
+      <default>false</default>
+      <locale name="C">
+         <short>Display debug information on tooltip?</short>
+      </locale>
+   </schema>
+      
+</schemalist>
+</gconfschemafile>

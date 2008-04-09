@@ -1,0 +1,269 @@
+2007-07-20  Adolfo González Blázquez <code@infinicode.org>
+
+	* Version 0.9.6.1 Released
+	* computertemp/temp_hddtemp.py: hddtemp sometimes returns bad utf8 chars, so clean them
+
+
+2006-10-18  Adolfo González Blázquez <code@infinicode.org>
+
+	* Version 0.9.6 Released
+	* computertemp/temp_i2csys_hwmon: Add support for i2c sensors under /sys/hwmon
+	
+
+2006-10-16  Adolfo González Blázquez <code@infinicode.org>
+
+	* Version 0.9.5 Released
+	
+
+2006-10-13  Adolfo González Blázquez <code@infinicode.org>
+
+	* computertemp/computertemp_applet.py: Force timeouts > 0
+	* computertemp/computertemp_gconf.py: Force timeouts > 0
+	* data/computertemp_menu2.xml: Change Disable Alarm icon to gtk-close
+	* data/computertemp_tray_menu2.xml: Change Disable Alarm icon to gtk-close
+	* computertemp/computertemp_applet.py: Change info shown on debug tooltip
+	* scripts/computertemp.in: Add commandline option to show debug info on tooltip
+	* computertemp/computertemp_applet.py: Add commandline option to show debug info on tooltip
+	* computertemp/computertemp_applet.py: Change icon only if zone has changed
+	* computertemp/computertemp_applet.py: Simplify the way the applet is created using the bonobo factory
+	
+
+2006-10-10  Adolfo González Blázquez <code@infinicode.org>
+
+	* Version 0.9.4 Released
+
+
+2006-10-09  Adolfo González Blázquez <code@infinicode.org>
+
+	* computertemp/computertemp_applet.py: Added support for custom information on logs
+	* computertemp/computertemp_prefs.py: Added support for custom information on logs
+	* computertemp/computertemp_gconf.py: Added support for custom information on logs
+
+
+2006-10-05  Adolfo González Blázquez <code@infinicode.org>
+
+	* Added Swedish translation, thanks to Daniel Nylander <po@danielnylander.se>
+	* computertemp/computertemp_applet.py: Fixed bug with timeouts, thanks to Zdravko Nikolov and Velko Hristov
+	
+
+2006-09-04  Adolfo González Blázquez <code@infinicode.org>
+
+	* Version 0.9.3 Released
+	* computertemp/temp_acpi.py: Changed the way the temperature file is read
+	* computertemp/temp_i8k.py: Changed the way the temperature file is read
+	* computertemp/temp_ibmacpi.py: Changed the way the temperature file is read
+	* computertemp/temp_omnibook.py: Changed the way the temperature file is read
+
+
+2006-08-30  Adolfo González Blázquez <code@infinicode.org>
+
+	* Version 0.9.2 Released
+
+
+2006-08-30  Adolfo González Blázquez <code@infinicode.org>
+
+	* computertemp/temp_meta.py: Added support for Apple G5 Windfarm sensors
+	* computertemp/temp_windfarm.py: Added support for Apple G5 Windfarm sensors
+	
+
+2006-08-30  Adolfo González Blázquez <code@infinicode.org>
+
+	* computertemp/computertemp_gconf.py: Added option to GConf to show debug data on tooltip
+	* data/computertemp.schemas.in: Added option to GConf to show debug data on tooltip
+	* computertemp/computertemp_prefs.py: Control that MinTemp < MaxTemp
+	* computertemp/computertemp_gconf.py: Control that MinTemp < MaxTemp
+	* computertemp/computertemp_applet.py: Added support for log filename dynamic patterns
+	* computertemp/computertemp_prefs.py: Added support for log filename dynamic patterns
+	* computertemp/computertemp_applet.py: Fixed bug in support for different timeouts for display and log
+	* computertemp/computertemp_prefs.py: Fixed bug in support for different timeouts for display and log
+
+
+2006-08-16  Adolfo González Blázquez <code@infinicode.org>
+
+	* computertemp/computertemp_applet.py: Fixed bug that prevented icon to appear sometimes
+	* computertemp/computertemp_prefs.py: Fixed bug that prevented icon to appear sometimes
+	
+
+2006-06-10  Adolfo González Blázquez <agblazquez@telefonica.net>
+
+	* Version 0.9.1 Released
+	
+
+2006-05-15  Adolfo González Blázquez <agblazquez@telefonica.net>
+
+	* computertemp/computertemp_gconf.py: timeout*1000 when changing gconf key
+	* computertemp/computertemp_prefs.py: Changed log filename check buttons to radio buttons
+	* po/zh.po: Added Simplified Chinese translation, thanks to tt <tt7646@gmail.com>
+	* computertemp/temp_ibmacpi.py: fixed typo (Batery -> Battery)
+	* computertemp/computertemp_applet.py: Added icon_path variable for helping debugging
+	* computertemp/computertemp_applet.py: Added support for printing debug information
+	* computertemp/computertemp_applet.py: Connect signals when every widget have been created
+	* computertemp/computertemp_applet.py: Added support for different logging timeout
+	* computertemp/computertemp_gconf.py: Added support for different logging timeout
+	* computertemp/computertemp_prefs.py: Added support for different logging timeout
+	
+
+2006-04-23  Adolfo González Blázquez <agblazquez@telefonica.net>
+
+	* computertemp/computertemp_prefs.py: Fixed typo on grades sign display on combobox
+	* computertemp/computertemp_applet.py: Init logfilename to empty string
+	
+
+2006-04-19  Adolfo González Blázquez <agblazquez@telefonica.net>
+
+	* Version 0.9.0 Released
+
+
+2006-04-18  Adolfo González Blázquez <agblazquez@telefonica.net>
+
+	* po/it.po: Updated Italian translation (Stefano Maggiolo)
+	* images/: changed icons for harddisk from Tango Project to Gnome Icon Theme.
+	* computertemp/computertemp_globals.py.in: changed harddisk icon copyright.
+
+
+2006-04-14  Adolfo González Blázquez <agblazquez@telefonica.net>
+
+	* po/de.po: Added German translation, thanks to Hannes Rosenbauer <rebugger@b3ta.de>
+	* po/nl.po: Updated Dutch translation (Adriaan Peeters)
+
+
+2006-04-13  Adolfo González Blázquez <agblazquez@telefonica.net>
+
+	* Changed name to Computer Temperature Monitor, because this is not anymore a laptop only applet.
+	* Updated the package (almost every file) to conform with the new name.
+	* computertemp/computertemp_prefs.py: Some changes in preferences window drawing.
+	* computertemp/computertemp_globals.py.in: added copyright and license.
+	* computertemp/computertemp_applet.py: added copyright and license to about dialog.
+	* computertemp/temp_acpi.py: temp_support if thermal dir is not empty.
+	* computertemp/temp_i8k.py: fixed stupid bug parsing i8k proc file.
+	* computertemp/temp_meta.py: forgot to add omnibook module (im stupid, yes)
+	* computertemp/temp_omnibook.py: the same idiot bug when parsing the proc related file.
+	* computertemp/temp_ibmacpi.py: finally fixed the bug, this time is true!
+	
+
+2006-04-13  Adolfo González Blázquez <agblazquez@telefonica.net>
+
+	* Version 0.8.0 Released
+	* Added dutch translation, thanks to Adriaan Peeters <apeeters@lashout.net>
+	
+
+2006-04-12  Adolfo González Blázquez <agblazquez@telefonica.net>
+
+	* laptoptemp/temp_hddtemp.py: Added support for monitoring hard disks (using hddtemp)
+	* laptoptemp/laptoptemp_applet.py: add support for displaying hd icon when using hddtemp
+	* images/: added icons for hddtemp monitoring
+	* laptoptemp/temp_meta.py: refactorized and improved sensors detect and enable
+	* laptoptemp/laptoptemp_prefs.py: removed "Thermal Zone" from thermalcombobox
+	* laptoptemp/temp_ibmacpi.py: finally fixed the bug, it should work now
+
+
+2006-04-11  Adolfo González Blázquez <agblazquez@telefonica.net>
+
+	* Added support for i2c-sensor kernel module (using libsensors /sys interface)
+	* Fixed bug with ibm_acpi module that made it useless
+	* Fixed bug with i8k module that made it useless
+	
+
+2006-04-10  Adolfo González Blázquez <agblazquez@telefonica.net>
+
+	* Added support for monitoring different hardware sensors:
+	  if the computer has kernel_acpi and ibm_acpi, you can 
+	  choose which to monitor in preferences dialog
+	* Fixed bug when reading preferences from GConf with unset values
+
+
+2006-04-09  Adolfo González Blázquez <agblazquez@telefonica.net>
+
+	* Added italian translation, thanks to Stefano Maggiolo <esse.t@tin.it>
+	* laptoptemp/laptoptemp_globals.py.in: little bugfix with python warning
+
+
+2006-04-09  Adolfo González Blázquez <agblazquez@telefonica.net>
+
+	* Version 0.7.0 released
+	
+
+2006-04-07  Adolfo González Blázquez <agblazquez@telefonica.net>
+
+	* Added support for Alarms (executing commands when temperature is reached)
+	* Changed preferences window (now has 3 tabs: display, log and alarm)
+	* Added entry to context menu to enable/disable alarm
+	
+
+2006-03-31  Adolfo González Blázquez <agblazquez@telefonica.net>
+
+	* Added french translation, thanks to Eric Steimer <Commuto@gmail.com>
+	* Changed the maximal time for checking temperatures to 3600 seconds (user petition)
+	* Moved all code about Preferences window to a new file laptoptemp_prefs.py
+	* Added support for vertical panels
+
+
+2006-03-19  Adolfo González Blázquez <agblazquez@telefonica.net>
+
+	* Added GConf support for storing preferences. No more text file preferences.
+	  Now you can add several instances of laptoptemp with different prefs.
+	* Logging now works with several laptoptemp applets.
+	* scripts/laptoptemp.in: fixed bug that prevented the applet to work when
+	  python dir is not on sys path (thanks to Commuto)
+
+
+2006-02-17  Adolfo González Blázquez <agblazquez@telefonica.net>
+
+	* Version 0.5.0 released
+	* Internationalized .server file
+
+
+2006-01-20  Adolfo González Blázquez <agblazquez@telefonica.net>
+
+	* Internationalization support added: Spanish and English
+	* Added support for IBM Laptops (ibm_acpi kernel support)
+	* Added support for Omnibook kernel module (some HPs and Toshibas)
+	* Added support for i8k kernel module (Dell Inspiron and Latitude)
+	* Fixed bug on logging feature (Francesco Accattapà)
+
+
+2006-01-19  Adolfo González Blázquez <agblazquez@telefonica.net>
+
+	* Changed code to make easier add new thermal monitor backends
+	* Added support for PowerBook and iBook (and maybe others) with therm_adt746x (thanks to Francesco Accattapà)
+	* Fixed Celsius to Fahrenheit conversion (thanks to Kevin Seymour)
+	* Centigrades is now Celsius (more correct?)
+	* New icon for no thermal support enabled
+	
+
+2006-01-13  Adolfo González Blázquez <agblazquez@telefonica.net>
+
+	* Version 0.4.1 Released
+	* Fixed bug that prevented the applet to work when upgrading from previous version (preferences read problems)
+	
+
+2006-01-11  Adolfo González Blázquez <agblazquez@telefonica.net>
+
+	* Version 0.4 Released
+	* Added tooltip to applet with info for thermal zones
+	* Added support for changing icon depending on temperature
+	* Support for selecting Celsius or Fahrenheit add
+	* Support for 3 display modes: graphic, text or graphic and text
+	* Preferences dialog modified to show new options
+	* New image files for icons
+
+
+2005-08-31  Adolfo González Blázquez <agblazquez@telefonica.net>
+
+	* Version 0.3 Released
+	* Add support for transparent and colored panel
+	* Changes on acpi_funcs.py, to allow better read of thermal zones
+	* Changes on laptoptemp to get with acpi_funcs.py
+	
+
+2005-08-29  Adolfo González Blázquez <agblazquez@telefonica.net>
+
+	* Version 0.2 Released
+	* Add option to enable/disable logging teperatures
+	* Some changes on preferences handling
+	* Display dialog window on errors
+
+
+2005-08-26  Adolfo González Blázquez <agblazquez@telefonica.net>
+
+	* Initial release

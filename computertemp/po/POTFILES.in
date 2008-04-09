@@ -1,0 +1,7 @@
+computertemp/computertemp_applet.py
+computertemp/computertemp_globals.py.in
+computertemp/computertemp_prefs.py
+data/computertemp_menu.xml
+data/computertemp_menu2.xml
+data/computertemp.schemas.in
+data/GNOME_ComputertempApplet.server.in.in

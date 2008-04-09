@@ -1,0 +1,331 @@
+# Simplified Chinese translations for computertemp package.
+# Copyright (C) 2006 tt <tt7646@gmail.com>
+# This file is distributed under the same license as the computertemp package.
+# tt <tt7646@gmail.com>, 2006.
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: computertemp 0.9.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-10-17 23:27+0200\n"
+"PO-Revision-Date: 2006-04-30 14:12+0800\n"
+"Last-Translator: tt <tt7646@gmail.com>\n"
+"Language-Team: Chinese/Simplified <i18n-translation@lists.linux.net.cn>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=GB2312\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../computertemp/computertemp_applet.py:230
+msgid " Temperatures "
+msgstr " 温度 "
+
+#: ../computertemp/computertemp_applet.py:264
+msgid "No Thermal Monitor Support!"
+msgstr "无热监视设备"
+
+#: ../computertemp/computertemp_applet.py:297
+msgid "There was an error creating directory"
+msgstr "创建目录是发生错误"
+
+#: ../computertemp/computertemp_applet.py:298
+#, python-format
+msgid ""
+"Can not create directory '%s'\n"
+"Please select another path"
+msgstr ""
+"无法创建目录 '%s'\n"
+"请选择另一路径"
+
+#: ../computertemp/computertemp_applet.py:317
+msgid "There was an error writing to"
+msgstr "写入失败"
+
+#: ../computertemp/computertemp_applet.py:318
+#, python-format
+msgid ""
+"Can not write to '%s'\n"
+"Please select another path"
+msgstr ""
+"无法写入 '%s'\n"
+"请选择新路径"
+
+#: ../computertemp/computertemp_applet.py:485
+msgid "translator-credits"
+msgstr "我爱拖鞋 <tt7646@gmail.com>"
+
+#. Display error if there are no sensors enabled
+#: ../computertemp/computertemp_applet.py:565
+msgid ""
+"\n"
+"There is not Thermal Monitor support on your machine!!!"
+msgstr ""
+"\n"
+"您的电脑上无热监视设备！"
+
+#: ../computertemp/computertemp_globals.py.in:33
+#: ../data/GNOME_ComputertempApplet.server.in.in.h:1
+msgid "Computer Temperature Monitor"
+msgstr "Computer Temperature Monitor"
+
+#: ../computertemp/computertemp_prefs.py:40
+msgid "Computer Temperature Monitor Preferences"
+msgstr "Computer Temperature Monitor Preferences"
+
+#: ../computertemp/computertemp_prefs.py:112
+#: ../computertemp/computertemp_prefs.py:291
+#: ../computertemp/computertemp_prefs.py:301
+msgid "No Thermal zones!"
+msgstr "No Thermal zones!"
+
+#: ../computertemp/computertemp_prefs.py:314
+msgid "<b>Thermal Zone Configuration</b>"
+msgstr "<b>监视配置</b>"
+
+#. Select Sensor to monitor
+#: ../computertemp/computertemp_prefs.py:323
+msgid "Select Sensor to monitor:"
+msgstr "选择传感器:"
+
+#. Select thermal zone
+#: ../computertemp/computertemp_prefs.py:342
+msgid "Select Thermal Zone:"
+msgstr "选择设备:"
+
+#: ../computertemp/computertemp_prefs.py:368
+msgid "<b>Display Configuration</b>"
+msgstr "<b>显示配置</b>"
+
+#. Display mode
+#: ../computertemp/computertemp_prefs.py:377
+msgid "Display mode:"
+msgstr "显示模式:"
+
+#: ../computertemp/computertemp_prefs.py:381
+msgid "Graphic"
+msgstr "图形"
+
+#: ../computertemp/computertemp_prefs.py:382
+msgid "Text"
+msgstr "文字"
+
+#: ../computertemp/computertemp_prefs.py:383
+msgid "Graphic and Text"
+msgstr "图形+文字"
+
+#. Display units
+#: ../computertemp/computertemp_prefs.py:394
+msgid "Display units:"
+msgstr "温度单位:"
+
+#: ../computertemp/computertemp_prefs.py:398
+#, python-format
+msgid "Celsius %s"
+msgstr "摄氏 %s"
+
+#: ../computertemp/computertemp_prefs.py:399
+#, python-format
+msgid "Fahrenheit %s"
+msgstr "华氏 %s"
+
+#. Update time
+#: ../computertemp/computertemp_prefs.py:410
+msgid "Update every (secs):"
+msgstr "刷新频率 (秒)"
+
+#. Min temp
+#: ../computertemp/computertemp_prefs.py:425
+msgid "Minimal Temperature:"
+msgstr "最低温度值:"
+
+#. Max temp
+#: ../computertemp/computertemp_prefs.py:439
+msgid "Maximal Temperature:"
+msgstr "最高温度值:"
+
+#: ../computertemp/computertemp_prefs.py:468
+msgid "Display"
+msgstr "显示"
+
+#: ../computertemp/computertemp_prefs.py:477
+msgid "<b>Logging Configuration</b>"
+msgstr "<b>日志配置</b>"
+
+#. Log text entry
+#: ../computertemp/computertemp_prefs.py:486
+msgid "Log temperatures to a text file"
+msgstr "输出到文本文件"
+
+#: ../computertemp/computertemp_prefs.py:489
+msgid "Use date for log file name"
+msgstr "使用日期为日志文件名"
+
+#: ../computertemp/computertemp_prefs.py:493
+#, fuzzy
+msgid "Update log every (seconds):"
+msgstr "刷新频率 (秒)"
+
+#: ../computertemp/computertemp_prefs.py:504
+#, fuzzy
+msgid "Set path for log file manually"
+msgstr "使用日期为日志文件名"
+
+#. Log format
+#: ../computertemp/computertemp_prefs.py:524
+msgid "Log format:"
+msgstr ""
+
+#: ../computertemp/computertemp_prefs.py:578
+msgid "Log"
+msgstr "日志"
+
+#: ../computertemp/computertemp_prefs.py:590
+msgid "<b>Alarm Configuration</b>"
+msgstr "<b>警报配置</b>"
+
+#. Enable alarm?
+#: ../computertemp/computertemp_prefs.py:602
+msgid "Enable alarm for this sensor?"
+msgstr "启用温度警报?"
+
+#. Alarm limit
+#: ../computertemp/computertemp_prefs.py:607
+msgid "Limit temperature:"
+msgstr "温度限制:"
+
+#. Raise alarm when...
+#: ../computertemp/computertemp_prefs.py:622
+msgid "Raise alarm when temperature is:"
+msgstr "提高报警当温度:"
+
+#: ../computertemp/computertemp_prefs.py:627
+msgid "smaller than limit"
+msgstr "低于限止温度"
+
+#: ../computertemp/computertemp_prefs.py:628
+msgid "greater than limit"
+msgstr "高于限止温度"
+
+#. Command to execute
+#: ../computertemp/computertemp_prefs.py:639
+msgid "Enter command to execute:"
+msgstr "输入执行命令:"
+
+#. Repeat the alarm?
+#: ../computertemp/computertemp_prefs.py:654
+msgid "Repeat the alarm command?"
+msgstr "重复警报命令?"
+
+#: ../computertemp/computertemp_prefs.py:675
+msgid "Alarm"
+msgstr "警报"
+
+#: ../data/computertemp_menu.xml.h:1 ../data/computertemp_menu2.xml.h:1
+msgid "_About"
+msgstr "_(A)关于"
+
+#: ../data/computertemp_menu.xml.h:2
+msgid "_Enable alarm"
+msgstr "_(E)激活警报"
+
+#: ../data/computertemp_menu.xml.h:3 ../data/computertemp_menu2.xml.h:3
+msgid "_Preferences"
+msgstr "_配置"
+
+#: ../data/computertemp_menu2.xml.h:2
+msgid "_Disable alarm"
+msgstr "_(D)关闭警报"
+
+#: ../data/computertemp.schemas.in.h:1
+msgid "Command to execute when alarm is triggered"
+msgstr "当报警是执行命令"
+
+#: ../data/computertemp.schemas.in.h:2
+msgid "Display debug information on tooltip?"
+msgstr ""
+
+#: ../data/computertemp.schemas.in.h:3
+msgid "Hardware sensor to monitor"
+msgstr "监视设备"
+
+#: ../data/computertemp.schemas.in.h:4
+msgid "Information written in log file"
+msgstr ""
+
+#: ../data/computertemp.schemas.in.h:5
+msgid "Is alarm enabled?"
+msgstr "警报是否已激活?"
+
+#: ../data/computertemp.schemas.in.h:6
+msgid "Is logging enabled?"
+msgstr "日志是否已激活?"
+
+#: ../data/computertemp.schemas.in.h:7
+msgid "Log file name"
+msgstr "日志文件名"
+
+#: ../data/computertemp.schemas.in.h:8
+msgid "Maximum temperature"
+msgstr "最高温度"
+
+#: ../data/computertemp.schemas.in.h:9
+msgid "Minimum temperature"
+msgstr "最低温度"
+
+#: ../data/computertemp.schemas.in.h:10
+msgid "Set log file name automatically?"
+msgstr "自动命名日志文件？"
+
+#: ../data/computertemp.schemas.in.h:11
+msgid "Should alarm command be repeated?"
+msgstr "是否重复报警命令?"
+
+#: ../data/computertemp.schemas.in.h:12
+msgid "Temperature limit that raises the alarm"
+msgstr "温度限止是提高报警频率"
+
+#: ../data/computertemp.schemas.in.h:13
+msgid "Thermal zone to monitor"
+msgstr "监视设备"
+
+#: ../data/computertemp.schemas.in.h:14
+msgid "Time (in seconds) between checks"
+msgstr "时间（秒）每次监视"
+
+#: ../data/computertemp.schemas.in.h:15
+#, fuzzy
+msgid "Time (in seconds) to update the log"
+msgstr "时间（秒）每次监视"
+
+#: ../data/computertemp.schemas.in.h:16
+msgid "Visualization mode: 0-Graphic, 1-Text, 2-Graphic and Text"
+msgstr "显示模式: 0-图形, 1-文字, 2-图形+文字"
+
+#: ../data/computertemp.schemas.in.h:17
+msgid "Visualization units: 0-Celsius, 1-Fahrenheit"
+msgstr "温度显示模式： 0-摄氏, 1-华氏"
+
+#: ../data/computertemp.schemas.in.h:18
+msgid "When to raise the alarm: 0-Smaller than limit, 1-Greater than limit"
+msgstr "何时提高警报: 0-高于限制, 1-低于限制"
+
+#: ../data/GNOME_ComputertempApplet.server.in.in.h:2
+msgid "Monitors Computer CPU temperature"
+msgstr "监视cpu温度"
+
+#, fuzzy
+#~ msgid "Monitors computer temperatures"
+#~ msgstr "监视cpu温度"
+
+#, fuzzy
+#~ msgid "Control your computer temperatures"
+#~ msgstr "监视cpu温度"
+
+#~ msgid "Enter path for log file:"
+#~ msgstr "输入日志保存路径"
+
+#~ msgid "Laptop Temperature Monitor"
+#~ msgstr "Monitor de Temperaturas del Portatil"
+
+#~ msgid "Thermal Zone %s"
+#~ msgstr "Zona T茅rmica %s"

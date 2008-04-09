@@ -1,0 +1,15 @@
+TODO LIST
+
+* Better names for ibmacpi sensors
+* Check for new sensors on preferences display (maybe not?)
+* Use names instead of numbers for storing sensors active on preferences
+
+
+ALREADY DONE
+
+* Add another time control for logging
+* Languages: de, fr, it, nl, zh
+* lm_sensors support - Partially done (using i2c kernel modules)
+* Alarms (gstreamer?)
+* Add support for vertical panel
+* Add support for enable/disable debug info via gconf

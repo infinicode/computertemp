@@ -1,0 +1,329 @@
+# French translations for computertemp package.
+# Copyright (C) 2006 Eric Steimer <Commuto@gmail.com>
+# This file is distributed under the same license as the computertemp package.
+# Eric Steimer <Commuto@gmail.com>, 2006.
+#
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: computertemp 0.9.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-10-17 23:27+0200\n"
+"PO-Revision-Date: 2006-10-17 23:28+0100\n"
+"Last-Translator: Adolfo González Blázquez <code@infinicode.org>\n"
+"Language-Team: French <fr@translate.freefriends.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../computertemp/computertemp_applet.py:230
+msgid " Temperatures "
+msgstr " Températures "
+
+#: ../computertemp/computertemp_applet.py:264
+msgid "No Thermal Monitor Support!"
+msgstr "Pas de prise en charge du capteur de température!"
+
+#: ../computertemp/computertemp_applet.py:297
+msgid "There was an error creating directory"
+msgstr "Une erreur est survenue à la création du répertoire"
+
+#: ../computertemp/computertemp_applet.py:298
+#, python-format
+msgid ""
+"Can not create directory '%s'\n"
+"Please select another path"
+msgstr ""
+"Impossible de créer le répertoire '%s'\n"
+"Veuillez choisir un autre chemin"
+
+#: ../computertemp/computertemp_applet.py:317
+msgid "There was an error writing to"
+msgstr "Une erreur est survenue à l'écriture de"
+
+#: ../computertemp/computertemp_applet.py:318
+#, python-format
+msgid ""
+"Can not write to '%s'\n"
+"Please select another path"
+msgstr ""
+"Ecriture refusée dans '%s'\n"
+"Veuillez choisir un autre chemin"
+
+#: ../computertemp/computertemp_applet.py:485
+msgid "translator-credits"
+msgstr "Eric Steimer <Commuto@gmail.com>"
+
+#. Display error if there are no sensors enabled
+#: ../computertemp/computertemp_applet.py:565
+msgid ""
+"\n"
+"There is not Thermal Monitor support on your machine!!!"
+msgstr ""
+"\n"
+"Il n'y a pas de prise en charge du capteur de température sur votre système !!!"
+
+#: ../computertemp/computertemp_globals.py.in:33
+#: ../data/GNOME_ComputertempApplet.server.in.in.h:1
+msgid "Computer Temperature Monitor"
+msgstr "Computer Temperature Monitor"
+
+#: ../computertemp/computertemp_prefs.py:40
+msgid "Computer Temperature Monitor Preferences"
+msgstr "Préférences de Computer Temperature Monitor"
+
+#: ../computertemp/computertemp_prefs.py:112
+#: ../computertemp/computertemp_prefs.py:291
+#: ../computertemp/computertemp_prefs.py:301
+msgid "No Thermal zones!"
+msgstr "Pas de capteur de température!"
+
+#: ../computertemp/computertemp_prefs.py:314
+msgid "<b>Thermal Zone Configuration</b>"
+msgstr "<b>Configuration du Capteur de Température</b>"
+
+#. Select Sensor to monitor
+#: ../computertemp/computertemp_prefs.py:323
+msgid "Select Sensor to monitor:"
+msgstr "Choisissez la Sonde pour monitorer:"
+
+#. Select thermal zone
+#: ../computertemp/computertemp_prefs.py:342
+msgid "Select Thermal Zone:"
+msgstr "Capteur de température :"
+
+#: ../computertemp/computertemp_prefs.py:368
+msgid "<b>Display Configuration</b>"
+msgstr "<b>Configuration de l'Affichage</b>"
+
+#. Display mode
+#: ../computertemp/computertemp_prefs.py:377
+msgid "Display mode:"
+msgstr "Mode d'affichage :"
+
+#: ../computertemp/computertemp_prefs.py:381
+msgid "Graphic"
+msgstr "Graphique"
+
+#: ../computertemp/computertemp_prefs.py:382
+msgid "Text"
+msgstr "Texte"
+
+#: ../computertemp/computertemp_prefs.py:383
+msgid "Graphic and Text"
+msgstr "Graphique et Texte"
+
+#. Display units
+#: ../computertemp/computertemp_prefs.py:394
+msgid "Display units:"
+msgstr "Unités :"
+
+#: ../computertemp/computertemp_prefs.py:398
+#, python-format
+msgid "Celsius %s"
+msgstr "Celsius %s"
+
+#: ../computertemp/computertemp_prefs.py:399
+#, python-format
+msgid "Fahrenheit %s"
+msgstr "Fahrenheit %s"
+
+#. Update time
+#: ../computertemp/computertemp_prefs.py:410
+msgid "Update every (secs):"
+msgstr "Rafraîchissement (secs) :"
+
+#. Min temp
+#: ../computertemp/computertemp_prefs.py:425
+msgid "Minimal Temperature:"
+msgstr "Température Minimale :"
+
+#. Max temp
+#: ../computertemp/computertemp_prefs.py:439
+msgid "Maximal Temperature:"
+msgstr "Température Maximale :"
+
+#: ../computertemp/computertemp_prefs.py:468
+msgid "Display"
+msgstr "Affichage :"
+
+#: ../computertemp/computertemp_prefs.py:477
+msgid "<b>Logging Configuration</b>"
+msgstr "<b>Configuration du Fichier log</b>"
+
+#. Log text entry
+#: ../computertemp/computertemp_prefs.py:486
+msgid "Log temperatures to a text file"
+msgstr "Sauvegarder les relevés dans un fichier texte"
+
+#: ../computertemp/computertemp_prefs.py:489
+msgid "Use date for log file name"
+msgstr "Utiliser la date comme nom de fichier"
+
+#: ../computertemp/computertemp_prefs.py:493
+msgid "Update log every (seconds):"
+msgstr "Actualiser le fichier log chaque (secondes) :"
+
+#: ../computertemp/computertemp_prefs.py:504
+msgid "Set path for log file manually"
+msgstr "Choisir un chemin de fichier log specifique"
+
+#. Log format
+#: ../computertemp/computertemp_prefs.py:524
+msgid "Log format:"
+msgstr "Log format:"
+
+#: ../computertemp/computertemp_prefs.py:578
+msgid "Log"
+msgstr "Log"
+
+#: ../computertemp/computertemp_prefs.py:590
+msgid "<b>Alarm Configuration</b>"
+msgstr "<b></b>"
+
+#. Enable alarm?
+#: ../computertemp/computertemp_prefs.py:602
+msgid "Enable alarm for this sensor?"
+msgstr "Activer l'alarme pour ce capteur ?"
+
+#. Alarm limit
+#: ../computertemp/computertemp_prefs.py:607
+msgid "Limit temperature:"
+msgstr "Seuil de température :"
+
+#. Raise alarm when...
+#: ../computertemp/computertemp_prefs.py:622
+msgid "Raise alarm when temperature is:"
+msgstr "Activer l'alarme à la température :"
+
+#: ../computertemp/computertemp_prefs.py:627
+msgid "smaller than limit"
+msgstr "au dessous de la limite"
+
+#: ../computertemp/computertemp_prefs.py:628
+msgid "greater than limit"
+msgstr "au dessus de la limite"
+
+#. Command to execute
+#: ../computertemp/computertemp_prefs.py:639
+msgid "Enter command to execute:"
+msgstr "Commande à exécuter :"
+
+#. Repeat the alarm?
+#: ../computertemp/computertemp_prefs.py:654
+msgid "Repeat the alarm command?"
+msgstr "Répéter la commande de l'alarme ?"
+
+#: ../computertemp/computertemp_prefs.py:675
+msgid "Alarm"
+msgstr "Alarme"
+
+#: ../data/computertemp_menu.xml.h:1
+#: ../data/computertemp_menu2.xml.h:1
+msgid "_About"
+msgstr "_A propos"
+
+#: ../data/computertemp_menu.xml.h:2
+msgid "_Enable alarm"
+msgstr "A_ctiver l'alarme"
+
+#: ../data/computertemp_menu.xml.h:3
+#: ../data/computertemp_menu2.xml.h:3
+msgid "_Preferences"
+msgstr "_Préférences"
+
+#: ../data/computertemp_menu2.xml.h:2
+msgid "_Disable alarm"
+msgstr "_Désactiver l'alarme"
+
+#: ../data/computertemp.schemas.in.h:1
+msgid "Command to execute when alarm is triggered"
+msgstr "Commande à exécuter au seuil d'alarme"
+
+#: ../data/computertemp.schemas.in.h:2
+msgid "Display debug information on tooltip?"
+msgstr ""
+
+#: ../data/computertemp.schemas.in.h:3
+msgid "Hardware sensor to monitor"
+msgstr "Sonde hardware à monitorer"
+
+#: ../data/computertemp.schemas.in.h:4
+msgid "Information written in log file"
+msgstr ""
+
+#: ../data/computertemp.schemas.in.h:5
+msgid "Is alarm enabled?"
+msgstr "Alarme activée ?"
+
+#: ../data/computertemp.schemas.in.h:6
+msgid "Is logging enabled?"
+msgstr "Sauvergarde vers fichier log activée ?"
+
+#: ../data/computertemp.schemas.in.h:7
+msgid "Log file name"
+msgstr "Nom du fichier log"
+
+#: ../data/computertemp.schemas.in.h:8
+msgid "Maximum temperature"
+msgstr "Température Maxi"
+
+#: ../data/computertemp.schemas.in.h:9
+msgid "Minimum temperature"
+msgstr "Température Mini"
+
+#: ../data/computertemp.schemas.in.h:10
+msgid "Set log file name automatically?"
+msgstr "Nom du fichier log automatique ?"
+
+#: ../data/computertemp.schemas.in.h:11
+msgid "Should alarm command be repeated?"
+msgstr "Répéter la commande associée à l'alarme ?"
+
+#: ../data/computertemp.schemas.in.h:12
+msgid "Temperature limit that raises the alarm"
+msgstr "Limite de température déclenchant l'alarme"
+
+#: ../data/computertemp.schemas.in.h:13
+msgid "Thermal zone to monitor"
+msgstr "Capteur à monitorer"
+
+#: ../data/computertemp.schemas.in.h:14
+msgid "Time (in seconds) between checks"
+msgstr "Durée (en secondes) entre deux relevés"
+
+#: ../data/computertemp.schemas.in.h:15
+msgid "Time (in seconds) to update the log"
+msgstr "Temps (en secondes) pour actualiser les log"
+
+#: ../data/computertemp.schemas.in.h:16
+msgid "Visualization mode: 0-Graphic, 1-Text, 2-Graphic and Text"
+msgstr "Mode d'Affichage: 0-Graphique, 1-Texte, 2-Graphique et Texte"
+
+#: ../data/computertemp.schemas.in.h:17
+msgid "Visualization units: 0-Celsius, 1-Fahrenheit"
+msgstr "Unités : 0-Celsius, 1-Fahrenheit"
+
+#: ../data/computertemp.schemas.in.h:18
+msgid "When to raise the alarm: 0-Smaller than limit, 1-Greater than limit"
+msgstr "Façon rendre l'alarme active : 0-En dessous de la limite, 1-Au dessus de la limite"
+
+#: ../data/GNOME_ComputertempApplet.server.in.in.h:2
+msgid "Monitors Computer CPU temperature"
+msgstr "Surveille la température CPU"
+
+#, fuzzy
+#~ msgid "Monitors computer temperatures"
+#~ msgstr "Surveille la température CPU"
+
+#, fuzzy
+#~ msgid "Control your computer temperatures"
+#~ msgstr "Surveille la température CPU"
+#~ msgid "Enter path for log file:"
+#~ msgstr "Chemin du fichier log :"
+#~ msgid "Laptop Temperature Monitor"
+#~ msgstr "Laptop Temperature Monitor"
+#~ msgid "Thermal Zone %s"
+#~ msgstr "Zone %s"
+
