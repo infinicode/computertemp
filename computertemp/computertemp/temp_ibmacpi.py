@@ -29,7 +29,7 @@ class TempFuncs:
 		self.thermal_path = '/proc/acpi/ibm/'
 		self.thermal_file = '/thermal'
 		self.sensors = range(8)
-		self.sensors_names = ('CPU', 'Mini-PCI', 'HDD', 'GPU', 'Battery', 'Unknown', 'Batery', 'Unknown')
+		self.sensors_names = ('CPU', 'Mini-PCI', 'HDD', 'GPU', 'Main Battery', 'Bay Battery', 'Main Battery', 'Bay Battery')
 
 	# Get the name of the hardware sensor
 	def get_sensor_name(self): return 'IBM ACPI'

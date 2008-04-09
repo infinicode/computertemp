@@ -1,5 +1,8 @@
 2008-04-09  Adolfo González Blázquez <code@infinicode.org>
 
+	* computertemp/temp_ibmacpi.py: (__init__):
+	Updated names for IBM sensors (Closes: #13030)
+
 	* computertemp/computertemp_applet.py:
 		(change_background),
 		(change_orientation),
