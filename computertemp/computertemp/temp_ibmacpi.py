@@ -66,7 +66,7 @@ class TempFuncs:
 				fproc.close()
 				temp = temp.split()
 				return temp[zone+1]
-			except IOError:
+			except:
 				return None
 			else:
 				return 0

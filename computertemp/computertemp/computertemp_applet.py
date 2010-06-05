@@ -143,7 +143,7 @@ class computertempApplet(gnomeapplet.Applet):
 		if self.visualization_units == 1: unit = "°F"
 		else: unit = "°C"
 		
-		loginfo = loginfo.replace('{temp}', `int(self.data)`)
+		loginfo = loginfo.replace('{temp}', str(self.data))
 		loginfo = loginfo.replace('{unit}', unit)
 		loginfo = loginfo.replace('{applet}', self.gconf.get_applet_name())
 		loginfo = loginfo.replace('{sensor}', self.tempmon.get_sensor_name())
@@ -169,7 +169,7 @@ class computertempApplet(gnomeapplet.Applet):
 
 	# Calculates temperature depending on preferences (celsius or fahrenheit)
 	def temperature(self, temp):
-		if self.visualization_units == 1:
+		if temp and self.visualization_units == 1:
 			return int(round(long(temp) * 9.00/5.00 + 32.00))
 		else: return temp
 
@@ -202,8 +202,16 @@ class computertempApplet(gnomeapplet.Applet):
 			if self.tempmon_enabled:
 				diff = (self.max_temp - self.min_temp) / 4
 	
-				temp = self.temperature(int(self.tempmon.get_zone_temp(self.tempmon.get_zone_name(self.thermalzone))))
-		
+				temp = self.tempmon.get_zone_temp(self.tempmon.get_zone_name(self.thermalzone))
+				
+				if temp == None:
+					self.icon_path = self.get_icon_file(prefix + "_na.png")
+					self.tempzone = 0
+					self.set_icon(self.icon_path)
+					return
+				
+				temp = self.temperature(int(temp))
+				
 				if temp < self.min_temp+(diff*1) and self.tempzone != 1:
 					self.tempzone = 1
 					self.icon_path = self.get_icon_file(prefix + "_25.png")
@@ -248,6 +256,10 @@ class computertempApplet(gnomeapplet.Applet):
 			
 			count = 0
 			for i in xrange(len(self.thermal_zones)):
+				temp = self.tempmon.get_zone_temp(self.thermal_zones[i])
+				if temp == None: 
+					self.applet.set_tooltip_text('')
+					return
 				text += "\n   %s: %s%s" % \
 					(self.tempmon.get_zone_display_name(i),
 					 int(self.temperature (self.tempmon.get_zone_temp(self.thermal_zones[i]))), unit)
@@ -286,7 +298,13 @@ class computertempApplet(gnomeapplet.Applet):
 			self.temp.show()
 
 			if self.tempmon_enabled:
-				self.data = int(self.tempmon.get_zone_temp(self.tempmon.get_zone_name(self.thermalzone)))
+				temp = self.tempmon.get_zone_temp(self.tempmon.get_zone_name(self.thermalzone))
+				if temp == None:
+					self.temp.set_text('--')
+					self.data = None
+					return
+				
+				self.data = int(temp)
 
 				if self.visualization_units == 1: unit = "°F"
 				else: unit = "°C"

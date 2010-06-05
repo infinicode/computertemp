@@ -70,7 +70,7 @@ class TempFuncs:
 				temp =  fproc.readline()
 				fproc.close()
 				return temp
-			except IOError:
+			except:
 				return None
 			else:
 				return 0

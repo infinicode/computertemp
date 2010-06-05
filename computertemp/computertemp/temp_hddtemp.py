@@ -75,7 +75,10 @@ class TempFuncs:
 	# Reads temperature from zone
 	def get_zone_temp(self, zone):
 		if self.temp_support():
-			self.get_data()
-			return self.hds[int(zone)][2]
+			try:
+				self.get_data()
+				return self.hds[int(zone)][2]
+			except:
+				return None
 		else:
 			return 0

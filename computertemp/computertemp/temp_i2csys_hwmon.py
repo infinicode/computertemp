@@ -66,7 +66,18 @@ class TempFuncs:
 		
 	# Return zone name to display at position num
 	def get_zone_display_name(self, num):
-		tmp = self.get_zone_name(num).split('/')
+		zone = self.get_zone_name(num)
+		labelfile = os.path.join(self.thermal_path, zone.replace('_input', '_label'))
+		if os.path.isfile(labelfile):
+			try:
+				fproc = open(labelfile,"r")
+				label =  fproc.readline().strip()
+				fproc.close()
+				return label
+			except:
+				pass
+				
+		tmp = zone.split('/')
 		num = tmp[2].lstrip('temp')
 		num = num.rstrip('_input')
 		return tmp[0] + " (" + num + ")"
@@ -80,7 +91,7 @@ class TempFuncs:
 				temp =  fproc.readline()
 				fproc.close()
 				return int(temp) / 1000
-			except IOError:
+			except:
 				return None
 		else:
 			return 0
