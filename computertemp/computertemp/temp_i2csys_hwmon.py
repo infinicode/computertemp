@@ -47,10 +47,11 @@ class TempFuncs:
 		if self.temp_support():
 			zones = []
 			for i in xrange(len(self.i2csensors)):
-				lista = (dircache.listdir(self.thermal_path+self.i2csensors[i]+'/device'))
+				suffix = os.path.isdir(self.thermal_path+self.i2csensors[i]+'/device') and '/device/' or '/'
+				lista = (dircache.listdir(self.thermal_path+self.i2csensors[i]+suffix))
 				for j in xrange(len(lista)):
 					if re.search('temp[0-9]*_input', lista[j]) != None:
-						zones.append(self.i2csensors[i]+'/device/'+lista[j])
+						zones.append(self.i2csensors[i]+suffix+lista[j])
 				
 			return zones
 		else: return None
