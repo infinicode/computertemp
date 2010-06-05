@@ -31,8 +31,11 @@ import gnomeapplet
 import time
 import sys
 import os
+import os.path as ospath
 import string
 import gc
+
+from xdg import BaseDirectory as bdir
 
 # Import libraries
 try:
@@ -203,24 +206,35 @@ class computertempApplet(gnomeapplet.Applet):
 		
 				if temp < self.min_temp+(diff*1) and self.tempzone != 1:
 					self.tempzone = 1
-					self.icon_path = glob.pixmaps_dir + "/" + prefix + "_25.png"
+					self.icon_path = self.get_icon_file(prefix + "_25.png")
 					self.set_icon(self.icon_path)
 				elif self.min_temp+(diff*1) <= temp < self.min_temp+(diff*2) and self.tempzone != 2:
-					self.icon_path = glob.pixmaps_dir + "/" + prefix + "_50.png"
+					self.icon_path = self.get_icon_file(prefix + "_50.png")
 					self.tempzone = 2
 					self.set_icon(self.icon_path)
 				elif self.min_temp+(diff*2) <= temp < self.min_temp+(diff*3) and self.tempzone != 3:
-					self.icon_path = glob.pixmaps_dir + "/" + prefix + "_75.png"
+					self.icon_path = self.get_icon_file(prefix + "_75.png")
 					self.tempzone = 3
 					self.set_icon(self.icon_path)
 				elif self.min_temp+(diff*3) <= temp and self.tempzone != 4:
-					self.icon_path = glob.pixmaps_dir + "/" + prefix + "_100.png"
+					self.icon_path = self.get_icon_file(prefix + "_100.png")
 					self.tempzone = 4
 					self.set_icon(self.icon_path)
 			else:
-				self.icon_path = glob.pixmaps_dir + "/temp_na.png"
+				self.icon_path = self.get_icon_file(prefix + "_na.png")
 				self.tempzone = 0
 				self.set_icon(self.icon_path)
+			
+	def get_icon_file(self, file):
+		localdir = ospath.join(bdir.xdg_data_home, glob.name)
+		if ospath.isdir(localdir):
+			localfile = ospath.join(localdir, file)
+			if ospath.isfile(localfile):
+				return ospath.join(localdir, file)
+			else:
+				return ospath.join(glob.pixmaps_dir, file)
+		else:
+			return ospath.join(glob.pixmaps_dir, file)
 			
 					
 	# Updates data shown on applet tooltip
@@ -420,10 +434,6 @@ class computertempApplet(gnomeapplet.Applet):
 			self.inside_applet.pack_start(self.temp)
 			self.inside_applet.show_all()
 			self.applet.add(self.inside_applet)
-			
-
-	def gtk_theme_changed(self, *args):
-		print "cambiado el tema"
 
 	# Draws applet
 	def create_applet(self, applet):
@@ -438,11 +448,11 @@ class computertempApplet(gnomeapplet.Applet):
 		
 		# Create label for temp
 		self.temp = gtk.Label()
+		self.temp.set_padding(2, 0)
 		self.update_text()
 		
 		# Creates hbox with icon and temp
 		self.inside_applet = gtk.HBox()
-		self.inside_applet.set_spacing(0)
 		self.inside_applet.pack_start(self.icon)
 		self.inside_applet.pack_start(self.temp)
 		
