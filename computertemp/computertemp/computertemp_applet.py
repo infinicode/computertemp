@@ -259,9 +259,9 @@ class computertempApplet(gnomeapplet.Applet):
 				text += "\n   Icon: %s" % self.icon_path
 				text += "\n   Log: %s" % self.parselogfilename(self.log_filename)
 			
-			self.tooltip.set_tip(self.applet, text)
+			self.applet.set_tooltip_text(text)
 		else:
-			self.tooltip.set_tip(self.applet, _('No Thermal Monitor Support!'))
+			self.applet.set_tooltip_text(_('No Thermal Monitor Support!'))
 			
 	# Update text
 	def update_text(self):
@@ -280,6 +280,8 @@ class computertempApplet(gnomeapplet.Applet):
 				self.temp.set_text(`self.temperature(self.data)`+unit)
 			else:
 				self.temp.set_text(self.data)
+				
+			self.set_text_style()
 	
 	
 	# Logging
@@ -422,10 +424,14 @@ class computertempApplet(gnomeapplet.Applet):
 			self.applet.add(self.inside_applet)
 			
 
+	def gtk_theme_changed(self, *args):
+		print "cambiado el tema"
+
 	# Draws applet
-	def create_applet(self):
+	def create_applet(self, applet):
 		
-		app_window = self.applet
+		# Set applet properties
+		applet.set_applet_flags (gnomeapplet.EXPAND_MINOR)
 		
 		# Creates icon for applet
 		self.icon = gtk.Image()
@@ -437,16 +443,21 @@ class computertempApplet(gnomeapplet.Applet):
 		
 		# Creates hbox with icon and temp
 		self.inside_applet = gtk.HBox()
+		self.inside_applet.set_spacing(0)
 		self.inside_applet.pack_start(self.icon)
 		self.inside_applet.pack_start(self.temp)
 		
 		# Creates tooltip
-		self.tooltip = gtk.Tooltips()
 		self.update_tooltip()
 		
 		# Adds hbox to applet
-		app_window.add(self.inside_applet)
-		app_window.show_all()
+		applet.add(self.inside_applet)
+		applet.show_all()
+		
+	def set_text_style(self):
+		settings = gtk.settings_get_default()
+		style = gtk.rc_get_style_by_paths(settings, "*PanelApplet*", "PanelApp*" , None)
+		self.temp.set_style(style)
 
 	def menu_set(self):
 		
@@ -549,7 +560,7 @@ class computertempApplet(gnomeapplet.Applet):
 		self.tempmon = tempf.TempFuncs(self)
 
 		# Lets create the gui
-		self.create_applet()
+		self.create_applet(applet)
 		self.change_orientation(None, None) # Forcing to get panel position
 		self.prefs = prefs.ComputertempPrefs(self)
 		

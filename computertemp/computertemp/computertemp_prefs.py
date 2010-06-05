@@ -509,9 +509,7 @@ class ComputertempPrefs:
         self.logentry.set_text(self.app.log_filename)
         self.logentry.set_sensitive(not self.app.autologname and self.app.logging)
         self.logentry.set_activates_default(True)
-        
-        self.logentrytooltip = gtk.Tooltips()
-        self.logentrytooltip.set_tip(self.logentry, self.app.tips_logname)
+        self.logentry.set_tooltip_text(self.app.tips_logname)
         
         self.lognamelabel = gtk.Label()
         self.lognamelabel.set_use_markup(True)
@@ -529,9 +527,7 @@ class ComputertempPrefs:
         self.logformat_entry.set_text(self.app.log_info)
         self.logformat_entry.set_sensitive(self.app.logging)
         self.logformat_entry.set_activates_default(True)
-        
-        self.logformattooltip = gtk.Tooltips()
-        self.logformattooltip.set_tip(self.logformat_entry, self.app.tips_loginfo)
+        self.logformat_entry.set_tooltip_text(self.app.tips_loginfo)
         
         logformathbox = gtk.HBox()
         logformathbox.set_spacing(12)
