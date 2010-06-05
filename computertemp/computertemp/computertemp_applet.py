@@ -550,6 +550,7 @@ class computertempApplet(gnomeapplet.Applet):
 		self.icon_path = ''
 		self.tips_logname = ''
 		self.tips_loginfo = ''
+		self.prefs = None
 
 		# GConf stuff init for preferences
 		self.gconf = gconf.ComputertempGConf(self)

@@ -258,7 +258,7 @@ class ComputertempGConf:
 				self.gconf_client.set_int(self.gconf_key_min_temp, self.app.max_temp - 1)
 			else:
 				self.app.min_temp = temp
-			self.app.prefs.spinmin.set_value(self.app.min_temp)
+			if self.app.prefs: self.app.prefs.spinmin.set_value(self.app.min_temp)
 			self.app.update_icon()
 			self.app.update_text()
 			self.app.update_tooltip()
@@ -271,7 +271,7 @@ class ComputertempGConf:
 				self.gconf_client.set_int(self.gconf_key_max_temp, self.app.min_temp + 1)
 			else:
 				self.app.max_temp = temp
-			self.app.prefs.spinmax.set_value(self.app.max_temp)
+			if self.app.prefs: self.app.prefs.spinmax.set_value(self.app.max_temp)
 			self.app.update_icon()
 			self.app.update_text()
 			self.app.update_tooltip()
@@ -288,13 +288,13 @@ class ComputertempGConf:
 	def preferences_log_filename_changed(self, client, connection_id, entry, args):
 		if entry.get_value() != None and entry.get_value().type == gconf.VALUE_STRING:
 			self.app.log_filename = entry.get_value().get_string()
-			self.app.prefs.logentry.set_text(self.app.log_filename)
+			if self.app.prefs: self.app.prefs.logentry.set_text(self.app.log_filename)
 			self.app.timeout_log_count = 0
 
 	def preferences_log_info_changed(self, client, connection_id, entry, args):
 		if entry.get_value() != None and entry.get_value().type == gconf.VALUE_STRING:
 			self.app.log_info = entry.get_value().get_string()
-			self.app.prefs.logformat_entry.set_text(self.app.log_info)
+			if self.app.prefs: self.app.prefs.logformat_entry.set_text(self.app.log_info)
 			self.app.timeout_log_count = 0
 			
 	def preferences_alarm_enabled_changed(self, client, connection_id, entry, args):
@@ -315,7 +315,7 @@ class ComputertempGConf:
 	def preferences_alarm_command_changed(self, client, connection_id, entry, args):
 		if entry.get_value() != None and entry.get_value().type == gconf.VALUE_STRING:
 			self.app.alarm_command = entry.get_value().get_string()
-			self.app.prefs.alarm_command_entry.set_text(self.app.alarm_command)
+			if self.app.prefs: self.app.prefs.alarm_command_entry.set_text(self.app.alarm_command)
 			self.app.reset_alarm()
 
 	def preferences_alarm_repeat_changed(self, client, connection_id, entry, args):
