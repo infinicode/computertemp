@@ -280,8 +280,6 @@ class computertempApplet(gnomeapplet.Applet):
 				self.temp.set_text(`self.temperature(self.data)`+unit)
 			else:
 				self.temp.set_text(self.data)
-				
-			self.set_text_style()
 	
 	
 	# Logging
@@ -432,6 +430,7 @@ class computertempApplet(gnomeapplet.Applet):
 		
 		# Set applet properties
 		applet.set_applet_flags (gnomeapplet.EXPAND_MINOR)
+		applet.connect('style-set',  self.set_text_style)
 		
 		# Creates icon for applet
 		self.icon = gtk.Image()
@@ -454,7 +453,7 @@ class computertempApplet(gnomeapplet.Applet):
 		applet.add(self.inside_applet)
 		applet.show_all()
 		
-	def set_text_style(self):
+	def set_text_style(self, widget, prev, *params):
 		settings = gtk.settings_get_default()
 		style = gtk.rc_get_style_by_paths(settings, "*PanelApplet*", "PanelApp*" , None)
 		self.temp.set_style(style)
