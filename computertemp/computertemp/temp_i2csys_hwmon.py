@@ -78,7 +78,7 @@ class TempFuncs:
 				pass
 				
 		tmp = zone.split('/')
-		num = tmp[2].lstrip('temp')
+		num = tmp[-1].lstrip('temp')
 		num = num.rstrip('_input')
 		return tmp[0] + " (" + num + ")"
 
