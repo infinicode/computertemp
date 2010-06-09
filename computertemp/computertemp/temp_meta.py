@@ -34,7 +34,13 @@ class TempFuncs:
 		self.get_active_sensors()
 		
 		if len(self.sensors) > 0: 
-			self.set_sensor_active(self.sensors[self.app.sensor][0])
+			if self.app.sensor < len(self.sensors):
+				s = self.sensors[self.app.sensor][0]
+				self.set_sensor_active(s)
+			else:
+				self.app.sensor = 0
+				self.set_sensor_active(self.sensors[0][0])
+			
 		else:
 			self.set_sensor_active(None)
 		
@@ -73,7 +79,9 @@ class TempFuncs:
 		
 		from computertemp import temp_null as funcs
 		for i in self.sensors:
-			if sensor in i: funcs = __import__(i[1], globals(), locals(), ['computertemp'])
+			if sensor == i[0]: 
+				funcs = __import__(i[1], globals(), locals(), ['computertemp'])
+				break
 			
 		self.tempfuncs = funcs.TempFuncs()
 		self.init_sensor()
@@ -95,27 +103,66 @@ class TempFuncs:
 	
 	# Get the name of the hardware sensor
 	# Out: string with the name of the hardware sensor
-	def get_sensor_name(self): return self.tempfuncs.get_sensor_name()
+	def get_sensor_name(self): 
+		try: return self.tempfuncs.get_sensor_name()
+		except Exception, e: 
+			self.__debug(self.__funcname(), e)
+			return ''
 	
 	# Is there Thermal Monitor support on hardware sensor?
 	# Out: True || False
-	def temp_support(self): return self.sensor_available and self.tempfuncs.temp_support()
+	def temp_support(self): 
+		try: return self.sensor_available and self.tempfuncs.temp_support()
+		except Exception, e: 
+			self.__debug(self.__funcname(), e)
+			return False
 
 	# Return a list with the thermal zones availables
 	# Out: list of thermal zones (for preferences combobox)
-	def get_zones(self): return self.tempfuncs.get_zones()
+	def get_zones(self): 
+		try: return self.tempfuncs.get_zones()
+		except Exception, e: 
+			self.__debug(self.__funcname(), e)
+			return []
 
 	# Return zone name at position num
 	# In  : number of thermal zone to monitor
 	# Out : name of the zone to monitor (file to read)
-	def get_zone_name(self, num): return self.tempfuncs.get_zone_name(num)
+	def get_zone_name(self, num): 
+		try: return self.tempfuncs.get_zone_name(num)
+		except Exception, e: 
+			self.__debug(self.__funcname(), e)
+			return '--'
 	
 	# Return zone name to display at position num
 	# In  : number of thermal zone to monitor
 	# Out : name of the zone to monitor (for displaying on combobox and tooltip)
-	def get_zone_display_name(self, num): return self.tempfuncs.get_zone_display_name(num)
+	def get_zone_display_name(self, num): 
+		try: return self.tempfuncs.get_zone_display_name(num)
+		except Exception, e: 
+			self.__debug(self.__funcname(), e)
+			return '--'
 	
 	# Reads temperature from zone
 	# In  : zone number
 	# Out : temparature
-	def get_zone_temp(self, zone): return self.tempfuncs.get_zone_temp(zone)
+	def get_zone_temp(self, zone): 
+		try: return self.tempfuncs.get_zone_temp(zone)
+		except Exception, e: 
+			self.__debug(self.__funcname(), e)
+			return '0'
+
+################################################################
+# HELPER FUNCTIONS
+	def __funcname(self):
+		import inspect
+		return inspect.stack()[1][3]
+		
+	def __debug(self, func, exc):
+		if self.app.debug:
+			import traceback
+			print "ERROR: %s (%s)" % (func, exc)
+			traceback.print_stack()
+			
+
+	    

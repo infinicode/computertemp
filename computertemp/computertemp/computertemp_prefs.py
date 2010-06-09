@@ -97,9 +97,7 @@ class ComputertempPrefs:
             self.app.sensor =  widget.get_active()
             self.app.thermalzone = 0
             
-            try:
-                self.app.tempmon.set_sensor_active(self.app.tempmon.sensors[widget.get_active()][0])
-            except IndexError: pass
+            self.app.tempmon.set_sensor_active(self.app.tempmon.sensors[widget.get_active()][0])
             
             while self.thermalcombo.get_active_text() != None:
                 self.thermalcombo.remove_text(self.thermalcombo.get_active())
@@ -282,7 +280,7 @@ class ComputertempPrefs:
 
 
     def populate_sensor_combobox(self):
-        
+
         if self.app.tempmon_enabled:
             for i in xrange(len(self.app.tempmon.sensors)):
                 self.sensorcombo.append_text(self.app.tempmon.sensors[i][0])
@@ -292,7 +290,7 @@ class ComputertempPrefs:
             self.sensorcombo.set_active(0)
 
     def populate_thermal_combobox(self):
-
+    
         if self.app.tempmon_enabled:
             for i in xrange(len(self.app.thermal_zones)):
                 self.thermalcombo.append_text(self.app.tempmon.get_zone_display_name(i))
@@ -325,10 +323,10 @@ class ComputertempPrefs:
         self.sensorcombo = gtk.combo_box_new_text()
         self.thermalcombo = gtk.combo_box_new_text()
         
+        self.populate_sensor_combobox()
+        
         self.sensorcombo.connect("changed",self.sensorcombo_changed)
         self.thermalcombo.connect("changed",self.thermalcombo_changed)
-        
-        self.populate_sensor_combobox()
 
         sensor_hbox = gtk.HBox()
         sensor_hbox.set_spacing(12)

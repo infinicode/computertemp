@@ -586,14 +586,22 @@ class computertempApplet(gnomeapplet.Applet):
 
 		# Init Temperature Monitor functions
 		self.tempmon = tempf.TempFuncs(self)
+		
+		# Display error if there are no sensors enabled
+		while not self.tempmon_enabled: 
+			if len(self.tempmon.sensors) > 1:
+				print "Ignoring defective sensor: %s" % self.tempmon.sensors[self.sensor]
+				self.sensor = 0
+				self.tempmon.set_sensor_active(self.tempmon.sensors[self.sensor][0])
+				self.gconf.save_prefs_sensor()
+			else:
+				self.dialog(_('\nThere is not Thermal Monitor support on your machine!!!'))
+				break
 
 		# Lets create the gui
 		self.create_applet(applet)
 		self.change_orientation(None, None) # Forcing to get panel position
 		self.prefs = prefs.ComputertempPrefs(self)
-		
-		# Display error if there are no sensors enabled
-		if not self.tempmon_enabled: self.dialog(_('\nThere is not Thermal Monitor support on your machine!!!'))
 		
 		# Init context menu stuff
 		self.verbs = [("Alarm", self.menu_alarm_toggled),
